@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style type="text/tailwindcss">
+        * {
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: campton;
+            src: url('assets/fonts/Rene Bieder - Campton Thin.otf');
+        }
+        @font-face {
+            font-family: sharfgroteskmedium;
+            src: url('assets/fonts/Medium25.otf');
+        }
+        .main {
+            @apply block md:flex md:flex-col md:h-screen
+
+        }
+
+        .hero {
+            @apply h-[60vh] flex items-center justify-center md:flex-1 content-['Hello']
+        }
+
+        footer {
+            @apply flex flex-col justify-center md:flex-row items-center md:justify-around 
+        }
+        footer div {
+            @apply mb-6
+        }
+        footer div ul li {
+            @apply py-2 font-[campton]
+        }
+        footer div ul li a {
+            @apply hover:text-[#0043B8] hover:underline text-[12px]
+        }
+
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="hero bg-no-repeat bg-cover bg-center" style="background-image: url('assets/images/bg.png');">
+            <div class="h-4/5 max-w-[75%] relative hidden md:block">
+                <img src="assets/images/man.png" class="w-full h-full object-contain" alt="" >
+                <div class="absolute w-full aspect-[6/1] top-1/2 text-[calc(28*100vw/1270)] min-[1270px]:text-[28px] px-2 text-center text-white font-[sharfgroteskmedium] min-[1270px]:pt-[25px] pt-[calc(25*100vw/1270)]">Il concorso Viaggia in Sicurezza 2024 è terminato.</div>
+            </div>
+            
+            <div class="h-4/5 max-w-[90%] relative md:hidden">
+                <img src="assets/images/man_mobile.png" class="w-full h-full object-contain" alt="" >
+                <div class="absolute w-full aspect-[5/2] top-1/2 text-[calc(19*100vw/470)] min-[470px]:text-[19px] px-2 text-center text-white  font-[sharfgroteskmedium] min-[470px]:pt-[25px] pt-[calc(25*100vw/470)]">Il concorso Viaggia in Sicurezza 2024 è terminato.</div>
+            </div>
+        </div>
+        <div class="text-center p-8  border-b border-b-[#707070] text-[12px] min-[768px]:text-[calc(19*100vw/1270)] min-[1270px]:text-[19px] font-[campton] ">
+            <p>Il concorso Viaggia in Sicurezza 2024 è terminato il 30 Novembre 2024.</p>
+            <p>Se hai partecipato al concorso e risposto alle domande hai ottenuto un voucher per il check-up gratuito.</p>
+            <p>Puoi usufruirne presentandolo ad una delle officine ‘a posto’, DediCar e Numero Uno convenzionate.</p>
+            
+        </div>
+        <footer class="p-4">
+            <div class="md:w-[240px]">
+                <img src="assets/images/lkq_icon.png" alt="">
+            </div>
+            <div class="w-[240px] flex justify-between md:order-last">
+
+                <img src="assets/images/aposto_icon.png" alt="">
+                <img src="assets/images/dedicar_icon.png" alt="">
+                <img src="assets/images/officina_icon.png" alt="">
+            </div>
+            <div>
+                <ul class="md:flex">
+                    <li class="pr-[10px] text-center"><a href="">Viaggia in Sicurezza 2024</a></li>
+                    <li class="px-[10px] text-center"><a href="">Impostazioni cookie</a></li>
+                    <li class="px-[10px] text-center"><a href="">Regolamento</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+    </div>
+    <a href="" class="fixed bottom-2 left-2"><img src="assets/images/cookies_icon.png" alt=""></a>
+</body>
+
+</html>
