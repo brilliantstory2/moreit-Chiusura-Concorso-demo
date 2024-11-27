@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <!-- <link rel="stylesheet" href="assets/style.css"> -->
+
     <style type="text/tailwindcss">
         * {
             box-sizing: border-box;
@@ -16,7 +16,7 @@
         }
         @font-face {
             font-family: sharfgroteskmedium;
-            src: url('assets/fonts/Medium25.otf');
+            src: url('assets/fonts/SharpGroteskMedium221.otf');
         }
         .main {
             @apply block md:flex md:flex-col md:h-screen
@@ -26,6 +26,15 @@
         .hero {
             @apply h-[60vh] flex items-center justify-center md:flex-1 content-['Hello']
         }
+        .hero > div {
+            @apply h-4/5 relative
+        }
+        .hero > div >div {
+            @apply absolute w-full top-1/2 text-center text-white font-[sharfgroteskmedium] 
+        }
+        .hero img {
+            @apply w-full h-full object-contain
+        }
 
         footer {
             @apply flex flex-col justify-center items-center p-4 md:flex-row  md:justify-around 
@@ -34,63 +43,61 @@
             @apply mb-6
         }
         footer div ul li {
-            @apply py-2 font-[campton]
+            @apply py-2 font-[campton] text-center px-[10px]
         }
         footer div>a {
-            @apply flex items-center
+            @apply flex items-center text-[16px]
         }
-        /* #onetrust-banner-sdk {
-            display: none !important;
-        } */
+
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" src="https://cdn.cookielaw.org/consent/01928b14-5ff8-7992-aa44-411f0544e75c/OtAutoBlock.js" ></script>
     <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="01928b14-5ff8-7992-aa44-411f0544e75c" ></script>
-    <script type="text/javascript">
-        function OptanonWrapper() { }
-    </script>
+
 </head>
 
 <body>
     <div class="main">
         <div class="hero bg-no-repeat bg-cover bg-center" style="background-image: url('assets/images/bg.png');">
-            <div class="h-4/5 max-w-[75%] relative hidden md:block">
-                <img src="assets/images/man.png" class="w-full h-full object-contain" alt="" >
-                <div class="absolute w-full aspect-[6/1] top-1/2 text-[calc(25*100vw/1270)] min-[1270px]:text-[25px] px-2 text-center text-white font-[sharfgroteskmedium] min-[1270px]:pt-[25px] pt-[calc(25*100vw/1270)]">Il concorso Viaggia in Sicurezza 2024 è terminato.</div>
+            <div class="max-w-[75%] hidden md:block">
+                <img src="assets/images/man.png" alt="" >
+                <div class="aspect-[6/1] text-[calc(25*100vw/1270)] min-[1270px]:text-[25px] px-2 min-[1270px]:pt-[25px] pt-[calc(25*100vw/1270)]">Il concorso Viaggia in Sicurezza 2024 è terminato.</div>
             </div>
             
-            <div class="h-4/5 max-w-[90%] relative md:hidden">
-                <img src="assets/images/man_mobile.png" class="w-full h-full object-contain" alt="" >
-                <div class="absolute w-full aspect-[5/2] top-1/2 text-[calc(18*100vw/470)] min-[470px]:text-[18px] px-4 text-center text-white  font-[sharfgroteskmedium] min-[470px]:pt-[25px] pt-[calc(25*100vw/470)]">Il concorso Viaggia in Sicurezza 2024 è terminato.</div>
+            <div class="max-w-[90%] md:hidden">
+                <img src="assets/images/man_mobile.png"  alt="" >
+                <div class="aspect-[5/2] text-[calc(18*100vw/470)] min-[470px]:text-[18px] px-4 min-[470px]:pt-[25px] pt-[calc(25*100vw/470)]">Il concorso Viaggia in Sicurezza 2024 è terminato.</div>
             </div>
         </div>
         <div class="text-center p-8  border-b border-b-[#707070] text-[12px] min-[768px]:text-[calc(19*100vw/1270)] min-[1270px]:text-[19px] font-[campton] ">
             <p>Il concorso Viaggia in Sicurezza 2024 è terminato il 30 Novembre 2024.</p>
             <p>Se hai partecipato al concorso e risposto alle domande hai ottenuto un voucher per il check-up gratuito.</p>
             <p>Puoi usufruirne presentandolo ad una delle officine ‘a posto’, DediCar e Numero Uno convenzionate.</p>
-            
         </div>
         <footer>
             <div class="md:w-[240px]">
                 <img src="assets/images/lkq_icon.png" alt="">
             </div>
             <div class="w-[240px] flex justify-between md:order-last">
-<!-- <img src="assets/images/aposto_icon.png" alt=""> -->
                 <a href="https://www.aposto.it/" target="_blank"><img src="assets/images/aposto_icon.png" alt=""></a>
                 <a href="https://www.officinededicar.it/" target="_blank"><img src="assets/images/dedicar_icon.png" alt=""></a>
                 <a href="https://www.officinanumerouno.it/" target="_blank"><img src="assets/images/officina_icon.png" alt=""></a>
             </div>
             <div>
                 <ul class="md:flex">
-                    <li class="pr-[10px] text-center"><a class="text-[12px]">Viaggia in Sicurezza 2024</a></li>
-                    <li class="px-[10px] text-center"><a href="#" class="hover:text-[#0043B8] hover:underline text-[12px] ot-sdk-show-settings">Impostazioni cookie</a></li>
-                    <li class="px-[10px] text-center"><a class="hover:text-[#0043B8] hover:underline text-[12px]" href="https://www.lkqrhiag-viaggiainsicurezza.it/pdf/regolamento-concorso-viaggia-in-sicurezza.pdf" target="_blank">Regolamento</a></li>
+                    <li><a>Viaggia in Sicurezza 2024</a></li>
+                    <li><a href="#" class="hover:text-[#0043B8] hover:underline" onclick="clickCookieSetting()">Impostazioni cookie</a></li>
+                    <li><a class="hover:text-[#0043B8] hover:underline " href="https://www.lkqrhiag-viaggiainsicurezza.it/pdf/regolamento-concorso-viaggia-in-sicurezza.pdf" target="_blank">Regolamento</a></li>
                 </ul>
             </div>
             
         </footer>
     </div>
-    <!-- <button  class="fixed bottom-2 left-2 ot-floating-button__open"><img src="assets/images/cookies_icon.png" alt=""></button> -->
+    <button  class="fixed bottom-2 left-2 ot-sdk-show-settings hidden">Impostazioni cookie</button>
+    <script>
+        function clickCookieSetting() {
+            document.getElementsByClassName('ot-sdk-show-settings')[0].click();
+        }
+    </script>
 </body>
 
 </html>
