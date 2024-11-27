@@ -36,8 +36,8 @@
         footer div ul li {
             @apply py-2 font-[campton]
         }
-        footer div ul li a {
-            @apply hover:text-[#0043B8] hover:underline text-[12px]
+        footer div>a {
+            @apply flex items-center
         }
 
     </style>
@@ -68,16 +68,16 @@
                 <img src="assets/images/lkq_icon.png" alt="">
             </div>
             <div class="w-[240px] flex justify-between md:order-last">
-
-                <img src="assets/images/aposto_icon.png" alt="">
-                <img src="assets/images/dedicar_icon.png" alt="">
-                <img src="assets/images/officina_icon.png" alt="">
+<!-- <img src="assets/images/aposto_icon.png" alt=""> -->
+                <a href="https://www.aposto.it/" target="_blank"><img src="assets/images/aposto_icon.png" alt=""></a>
+                <a href="https://www.officinededicar.it/" target="_blank"><img src="assets/images/dedicar_icon.png" alt=""></a>
+                <a href="https://www.officinanumerouno.it/" target="_blank"><img src="assets/images/officina_icon.png" alt=""></a>
             </div>
             <div>
                 <ul class="md:flex">
-                    <li class="pr-[10px] text-center"><a href="">Viaggia in Sicurezza 2024</a></li>
-                    <li class="px-[10px] text-center"><a href="">Impostazioni cookie</a></li>
-                    <li class="px-[10px] text-center"><a href="">Regolamento</a></li>
+                    <li class="pr-[10px] text-center"><a class="text-[12px]">Viaggia in Sicurezza 2024</a></li>
+                    <li class="px-[10px] text-center"><a href="" class="hover:text-[#0043B8] hover:underline text-[12px]">Impostazioni cookie</a></li>
+                    <li class="px-[10px] text-center"><a class="hover:text-[#0043B8] hover:underline text-[12px]" href="https://www.lkqrhiag-viaggiainsicurezza.it/pdf/regolamento-concorso-viaggia-in-sicurezza.pdf" target="_blank">Regolamento</a></li>
                 </ul>
             </div>
             
